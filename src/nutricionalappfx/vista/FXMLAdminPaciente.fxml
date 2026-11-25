@@ -27,28 +27,26 @@
             <Font name="System Bold" size="22.0" />
          </font>
       </Label>
-      <Button fx:id="btnCerrarSesion" layoutX="720.0" layoutY="20.0" mnemonicParsing="false" onAction="#clicCerrarSesion" prefHeight="30.0" prefWidth="105.0" text="Cerrar sesión" />
+      <Button fx:id="btnCerrarSesion" layoutX="720.0" layoutY="20.0" mnemonicParsing="false" onAction="#handleBottonCerrarSesion" prefHeight="30.0" prefWidth="105.0" text="Cerrar sesión" />
       
       <Separator layoutX="25.0" layoutY="60.0" prefHeight="3.0" prefWidth="800.0" />
 
       <!-- Barra de búsqueda y botones de acción -->
-      <TextField fx:id="tfBuscar" layoutX="25.0" layoutY="78.0" prefHeight="30.0" prefWidth="240.0" promptText="Ingrese código, nombre o apellido..." />
-      <Button fx:id="btnBuscar" layoutX="275.0" layoutY="78.0" mnemonicParsing="false" onAction="#clicBuscar" prefHeight="30.0" prefWidth="80.0" text="Buscar" />
+      <TextField fx:id="txBuscador" layoutX="71.0" layoutY="78.0" prefHeight="30.0" prefWidth="278.0" promptText="Ingrese código, nombre o apellido..." />
       
-      <Button fx:id="btnAlta" layoutX="430.0" layoutY="78.0" mnemonicParsing="false" onAction="#clicAlta" prefHeight="30.0" prefWidth="80.0" text="Alta" />
-      <Button fx:id="btnEdicion" layoutX="525.0" layoutY="78.0" mnemonicParsing="false" onAction="#clicEdicion" prefHeight="30.0" prefWidth="80.0" text="Edición" />
-      <Button fx:id="btnBaja" layoutX="620.0" layoutY="78.0" mnemonicParsing="false" onAction="#clicBaja" prefHeight="30.0" prefWidth="80.0" text="Baja" />
+      <Button fx:id="btnAlta" layoutX="430.0" layoutY="78.0" mnemonicParsing="false" onAction="#handleBottonRegistrar" prefHeight="30.0" prefWidth="80.0" text="Registrar" />
+      <Button fx:id="btnEdicion" layoutX="525.0" layoutY="78.0" mnemonicParsing="false" onAction="#handleBottonEditar" prefHeight="30.0" prefWidth="80.0" text="Editar" />
+      <Button fx:id="btnBaja" layoutX="620.0" layoutY="78.0" mnemonicParsing="false" onAction="#handleButtonEliminar" prefHeight="30.0" prefWidth="80.0" text="Eliminar" />
 
       <!-- Tabla de Pacientes -->
       <TableView fx:id="tvPacientes" layoutX="25.0" layoutY="125.0" prefHeight="365.0" prefWidth="800.0">
         <columns>
           <TableColumn fx:id="colCodigo" prefWidth="107.0" text="Código Paciente" />
-          <TableColumn fx:id="colNombre" prefWidth="103.0" text="Nombre" />
-          <TableColumn fx:id="colApellidoPaterno" prefWidth="120.0" text="Apellido Paterno" />
-          <TableColumn fx:id="colApellidoMaterno" prefWidth="120.0" text="Apellido Materno" />
-          <TableColumn fx:id="colFechaNacimiento" prefWidth="115.0" text="Fecha Nacimiento" />
-          <TableColumn fx:id="colTelefono" prefWidth="105.0" text="Teléfono" />
-          <TableColumn fx:id="colCorreo" prefWidth="130.0" text="Correo Electrónico" />
+          <TableColumn fx:id="colNombre" prefWidth="169.0" text="Nombre(s)" />
+          <TableColumn fx:id="colApellidoPaterno" prefWidth="152.0" text="Apellido Paterno" />
+          <TableColumn fx:id="colApellidoMaterno" prefWidth="138.0" text="Apellido Materno" />
+          <TableColumn fx:id="colFechaNacimiento" prefWidth="129.0" text="Fecha Nacimiento" />
+          <TableColumn fx:id="colPesoInicial" minWidth="0.0" prefWidth="104.0" text="Peso Inicial" />
         </columns>
       </TableView>
    </children>
